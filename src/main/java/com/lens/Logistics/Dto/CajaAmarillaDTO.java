@@ -2,19 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.lens.Logistics.Entity;
+package com.lens.Logistics.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.lens.Logistics.Entity.CajaBlanca;
+import java.util.List;
 
-@Entity
-public class Boxes {
+public class CajaAmarillaDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String nombreCajaAmarilla;
     private double alto;
     private double ancho;
@@ -22,11 +16,15 @@ public class Boxes {
     private double peso;
     private double costo;
     private boolean transporteAereo;
+    private List<CajaBlanca> cajasBlancas;
 
-    public Boxes() {
+    // Constructor vacío
+    public CajaAmarillaDTO() {
     }
 
-    public Boxes(String nombreCajaAmarilla, boolean enviado, double alto, double ancho, double profundidad, double peso, double costo, boolean transporteAereo) {
+    // Constructor con parámetros
+    public CajaAmarillaDTO(String nombreCajaAmarilla, double alto, double ancho, double profundidad, double peso,
+            double costo, boolean transporteAereo, List<CajaBlanca> cajasBlancas) {
         this.nombreCajaAmarilla = nombreCajaAmarilla;
         this.alto = alto;
         this.ancho = ancho;
@@ -34,17 +32,10 @@ public class Boxes {
         this.peso = peso;
         this.costo = costo;
         this.transporteAereo = transporteAereo;
+        this.cajasBlancas = cajasBlancas;
     }
 
-    //Getters and Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+    // Getters y setters
     public String getNombreCajaAmarilla() {
         return nombreCajaAmarilla;
     }
@@ -99,5 +90,13 @@ public class Boxes {
 
     public void setTransporteAereo(boolean transporteAereo) {
         this.transporteAereo = transporteAereo;
+    }
+
+    public List<CajaBlanca> getCajasBlancas() {
+        return cajasBlancas;
+    }
+
+    public void setCajasBlancas(List<CajaBlanca> cajasBlancas) {
+        this.cajasBlancas = cajasBlancas;
     }
 }

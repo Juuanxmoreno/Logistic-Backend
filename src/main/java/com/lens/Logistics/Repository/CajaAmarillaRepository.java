@@ -4,24 +4,10 @@
  */
 package com.lens.Logistics.Repository;
 
-import com.lens.Logistics.Entity.Boxes;
-import java.util.List;
-import java.util.Optional;
+import com.lens.Logistics.Entity.CajaAmarilla;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BoxesRepository extends JpaRepository<Boxes, Integer> {
-
-    @Override
-    Boxes save(Boxes boxes);
-
-    @Override
-    Optional<Boxes> findById(Integer id);
-
-    @Override
-    List<Boxes> findAll();
-
-    @Override
-    void deleteById(Integer id);
+public interface CajaAmarillaRepository extends JpaRepository<CajaAmarilla, Long> {
 }
