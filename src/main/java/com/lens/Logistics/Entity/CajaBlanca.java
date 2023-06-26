@@ -17,6 +17,7 @@ public class CajaBlanca {
     private Long id;
 
     private String nombreCajaBlanca;
+    private double pesoCajaBlancaVacia;
     private double pesoCajaBlanca;
     private double altoCajaBlanca;
     private double anchoCajaBlanca;
@@ -31,10 +32,11 @@ public class CajaBlanca {
     }
 
     // Constructor con parámetros
-    public CajaBlanca(String nombreCajaBlanca, double pesoCajaBlanca, double altoCajaBlanca, double anchoCajaBlanca,
+    public CajaBlanca(String nombreCajaBlanca, double pesoCajaBlanca, double pesoCajaBlancaVacia, double altoCajaBlanca, double anchoCajaBlanca,
             double profundidadCajaBlanca, String modeloLente, double pesoLente, String colorLente,
             int cantidadLentes) {
         this.nombreCajaBlanca = nombreCajaBlanca;
+        this.pesoCajaBlancaVacia = pesoCajaBlancaVacia;
         this.pesoCajaBlanca = pesoCajaBlanca;
         this.altoCajaBlanca = altoCajaBlanca;
         this.anchoCajaBlanca = anchoCajaBlanca;
@@ -60,6 +62,14 @@ public class CajaBlanca {
 
     public void setNombreCajaBlanca(String nombreCajaBlanca) {
         this.nombreCajaBlanca = nombreCajaBlanca;
+    }
+
+    public double getPesoCajaBlancaVacia() {
+        return pesoCajaBlancaVacia;
+    }
+
+    public void setPesoCajaBlancaVacia(double pesoCajaBlancaVacia) {
+        this.pesoCajaBlancaVacia = pesoCajaBlancaVacia;
     }
 
     public double getPesoCajaBlanca() {

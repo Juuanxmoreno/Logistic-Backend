@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "https://stocklabels-web.web.app/"})
+@CrossOrigin(origins = {"http://localhost:4200", "https://stocklabels-web.web.app"})
 @RequestMapping("/cajas-amarillas")
 public class CajaAmarillaController {
 

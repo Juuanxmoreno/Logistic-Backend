@@ -1,0 +1,7 @@
+com\lens\Logistics\LogisticsApplication.class
+com\lens\Logistics\Entity\CajaAmarilla.class
+com\lens\Logistics\Dto\CajaAmarillaDTO.class
+com\lens\Logistics\Entity\CajaBlanca.class
+com\lens\Logistics\Service\CajaAmarillaService.class
+com\lens\Logistics\Controller\CajaAmarillaController.class
+com\lens\Logistics\Repository\CajaAmarillaRepository.class
